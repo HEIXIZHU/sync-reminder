@@ -1,9 +1,9 @@
 {
   "id": "sync-reminder",
   "name": "Sync Reminder",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "minAppVersion": "1.5.0",
-  "description": "电脑和手机上的官方 Obsidian Sync 同步状态浮窗。",
+  "description": "Display compact official Sync status reminders on desktop and mobile.",
   "author": "HEIXIZHU",
   "isDesktopOnly": false
 }
