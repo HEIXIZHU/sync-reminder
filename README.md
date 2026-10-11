@@ -11,7 +11,7 @@
 
 ## 安装
 
-当前电脑仓库中已放置插件文件。在 Obsidian 设置 → 第三方插件中刷新列表，启用 **Sync Reminder**。如果没有出现，重启 Obsidian。需要开启官方核心插件 **Sync** 并连接远程仓库。
+从 [GitHub Releases](https://github.com/HEIXIZHU/sync-reminder/releases) 下载 `main.js`、`manifest.json`、`styles.css`，放入仓库的 `.obsidian/plugins/sync-reminder/` 目录。在 Obsidian 设置 → 第三方插件中刷新列表，启用 **Sync Reminder**。如果没有出现，重启 Obsidian。需要开启官方核心插件 **Sync** 并连接远程仓库。
 
 手机端将 `main.js`、`manifest.json`、`styles.css` 放入对应仓库的 `.obsidian/plugins/sync-reminder/`。无需复制源码或安装 Node.js。如果使用官方 Sync 传递插件，请在两端的 Sync 设置中启用第三方插件和相关配置同步，等待文件传输完成，再重启手机 Obsidian 并确认插件已启用。
 
