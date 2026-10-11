@@ -1,0 +1,4 @@
+# Device-specific Obsidian plugin preferences
+data.json
+node_modules/
+*.log

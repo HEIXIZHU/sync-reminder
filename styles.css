@@ -1,0 +1,38 @@
+.sync-reminder-panel {
+  position: fixed;
+  z-index: 10000;
+  top: calc(env(safe-area-inset-top, 0px) + 54px);
+  right: calc(env(safe-area-inset-right, 0px) + 12px);
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+  padding: 7px 10px;
+  border: 1px solid var(--background-modifier-border);
+  border-left: 3px solid var(--interactive-accent);
+  border-radius: 8px;
+  background: var(--background-primary);
+  color: var(--text-normal);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
+  pointer-events: none;
+  text-align: center;
+}
+.sync-reminder-panel[hidden] { display: none; }
+.sync-reminder-panel strong, .sync-reminder-panel span { display: block; }
+.sync-reminder-panel strong { font-size: 13px; font-weight: 500; }
+.sync-reminder-panel span { display: none; }
+.sync-reminder-icon { display: none; }
+.sync-reminder-panel[data-icon-only="true"] { width: 30px; height: 30px; padding: 5px; border-left-width: 1px; color: var(--interactive-accent); }
+.sync-reminder-panel[data-icon-only="true"] strong { display: none; }
+.sync-reminder-panel[data-icon-only="true"] .sync-reminder-icon { display: flex; align-items: center; justify-content: center; }
+.sync-reminder-icon svg { width: 18px; height: 18px; }
+.sync-reminder-panel[data-icon-only="true"][data-state="synced"] { color: var(--color-green, #38a169); }
+.sync-reminder-panel[data-icon-only="true"][data-state="error"], .sync-reminder-panel[data-icon-only="true"][data-state="disconnected"] { color: var(--color-red, #e05252); }
+.sync-reminder-panel[data-icon-only="true"][data-state="paused"], .sync-reminder-panel[data-icon-only="true"][data-state="unknown"], .sync-reminder-panel[data-icon-only="true"][data-state="disabled"] { color: var(--color-orange, #d69e2e); }
+.sync-reminder-panel[data-position="bottom"] { top: auto; bottom: calc(env(safe-area-inset-bottom, 0px) + 80px); }
+.sync-reminder-panel[data-state="synced"] { border-left-color: var(--color-green, #38a169); }
+.sync-reminder-panel[data-state="error"], .sync-reminder-panel[data-state="disconnected"] { border-left-color: var(--color-red, #e05252); }
+.sync-reminder-panel[data-state="unknown"], .sync-reminder-panel[data-state="paused"], .sync-reminder-panel[data-state="disabled"] { border-left-color: var(--color-orange, #d69e2e); }
+@media (prefers-reduced-motion: no-preference) {
+  .sync-reminder-panel[data-state="syncing"] .sync-reminder-icon svg, .sync-reminder-panel[data-state="checking"] .sync-reminder-icon svg { animation: sync-reminder-spin 1.5s linear infinite; }
+  @keyframes sync-reminder-spin { to { transform: rotate(360deg); } }
+}
